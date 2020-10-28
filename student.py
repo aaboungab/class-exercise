@@ -1,13 +1,15 @@
 class Student:
-    def __init__(self, name, age,class_):
+    def __init__(self, name, age):
         self.name = name
         self.age = age
-        self.class_ = "student"
+    
+    class_ = "student"
 
-    def test_score(self,test1,test2,test3):
-        self.test1 = int(test1)
-        self.test2 = int(test2)
-        self.test3 = int(test3)
-        avg_score = (test1+test2+test3)/3
+    def test_score(self,score_1,score_2,score_3):
+        total = score_1 + score_2 + score_3
+        avg_score = total/3
         return f"Average score across 3 tests is {avg_score:.2f}"
 
+Anas = Student("Anas", 24)
+print(Anas.class_)
+print(Anas.test_score(80,85,95))
